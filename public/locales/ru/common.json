@@ -1,0 +1,163 @@
+{
+  "pages": {
+    "login": {
+      "title": "Войти в свой аккаунт",
+      "signin": "Войти",
+      "signup": "Зарегистрироваться",
+      "divider": "или",
+      "fields": {
+        "email": "Email",
+        "password": "Пароль"
+      },
+      "errors": {
+        "validEmail": "Некорректный адрес электронной почты"
+      },
+      "buttons": {
+        "submit": "Войти",
+        "forgotPassword": "Забыли пароль?",
+        "noAccount": "Нет аккаунта?",
+        "rememberMe": "Запомнить меня"
+      }
+    },
+    "forgotPassword": {
+      "title": "Забыли пароль?",
+      "fields": {
+        "email": "Email"
+      },
+      "errors": {
+        "validEmail": "Некорректный адрес электронной почты"
+      },
+      "buttons": {
+        "submit": "Отправить инструкции по сбросу"
+      }
+    },
+    "register": {
+      "title": "Зарегистрируйтесь",
+      "fields": {
+        "email": "Email",
+        "password": "Пароль"
+      },
+      "errors": {
+        "validEmail": "Некорректный адрес электронной почты"
+      },
+      "buttons": {
+        "submit": "Зарегистрироваться",
+        "haveAccount": "Уже есть аккаунт?"
+      }
+    },
+    "updatePassword": {
+      "title": "Обновить пароль",
+      "fields": {
+        "password": "Новый пароль",
+        "confirmPassword": "Подтвердите новый пароль"
+      },
+      "errors": {
+        "confirmPasswordNotMatch": "Пароли не совпадают"
+      },
+      "buttons": {
+        "submit": "Обновить"
+      }
+    },
+    "error": {
+      "info": "Возможно, вы забыли добавить компонент {{action}} в ресурс {{resource}}.",
+      "404": "Извините, посещенная вами страница не существует.",
+      "resource404": "Вы уверены, что создали ресурс {{resource}}.",
+      "backHome": "На главную"
+    }
+  },
+  "actions": {
+    "list": "Список",
+    "create": "Создать",
+    "edit": "Редактировать",
+    "show": "Показать"
+  },
+  "buttons": {
+    "create": "Создать",
+    "save": "Сохранить",
+    "logout": "Выйти",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "cancel": "Отмена",
+    "confirm": "Вы уверены?",
+    "filter": "Фильтр",
+    "clear": "Очистить",
+    "refresh": "Обновить",
+    "show": "Показать",
+    "undo": "Отменить",
+    "import": "Импорт",
+    "clone": "Клонировать",
+    "notAccessTitle": "У вас нет доступа"
+  },
+  "warnWhenUnsavedChanges": "Вы уверены, что хотите уйти? У вас есть несохраненные изменения.",
+  "notifications": {
+    "success": "Успешно",
+    "error": "Ошибка (код состояния: {{statusCode}})",
+    "undoable": "У вас есть {{seconds}} секунд, чтобы отменить",
+    "createSuccess": "Успешно создано: {{resource}}",
+    "createError": "Ошибка при создании {{resource}} (код состояния: {{statusCode}})",
+    "deleteSuccess": "Успешно удалено: {{resource}}",
+    "deleteError": "Ошибка при удалении {{resource}} (код состояния: {{statusCode}})",
+    "editSuccess": "Успешно отредактировано: {{resource}}",
+    "editError": "Ошибка при редактировании {{resource}} (код состояния: {{statusCode}})",
+    "importProgress": "Импорт: {{processed}}/{{total}}"
+  },
+  "loading": "Загрузка",
+  "tags": {
+    "clone": "Клонировать"
+  },
+  "dashboard": {
+    "title": "Панель управления"
+  },
+  "blog_posts": {
+    "blog_posts": "Записи в блоге",
+    "fields": {
+      "id": "Идентификатор",
+      "title": "Заголовок",
+      "content": "Содержание",
+      "status": "Статус",
+      "createdAt": "Дата создания",
+      "category": "Категория"
+    },
+    "titles": {
+      "create": "Создать запись в блоге",
+      "edit": "Редактировать запись в блоге",
+      "list": "Записи в блоге",
+      "show": "Показать запись в блоге"
+    }
+  },
+  "categories": {
+    "categories": "Категории",
+    "fields": {
+      "id": "Идентификатор",
+      "title": "Заголовок",
+      "createdAt": "Дата создания"
+    },
+    "titles": {
+      "create": "Создать категорию",
+      "edit": "Редактировать категорию",
+      "list": "Категории",
+      "show": "Показать категорию"
+    }
+  },
+  "documentTitle": {
+    "default": "refine",
+    "suffix": " | refine",
+    "blog_posts": {
+      "list": "Записи в блоге | refine",
+      "show": "#{{id}} Показать запись в блоге | refine",
+      "edit": "#{{id}} Редактировать запись в блоге | refine",
+      "create": "Создать новую запись в блоге | refine",
+      "clone": "#{{id}} Клонировать запись в блоге | refine"
+    },
+    "categories": {
+      "list": "Категории | refine",
+      "show": "#{{id}} Показать категорию | refine",
+      "edit": "#{{id}} Редактировать категорию | refine",
+      "create": "Создать новую категорию | refine",
+      "clone": "#{{id}} Клонировать категорию | refine"
+    }
+  },
+  "table": {
+    "actions": "Действия"
+  }
+}

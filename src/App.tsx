@@ -46,6 +46,7 @@ function App() {
                 liveMode: 'auto',
               }}
             >
+              <Home />
               <Routes>
                 <Route index element={<WelcomePage />} />
                 <Route index element={<Home />} />
