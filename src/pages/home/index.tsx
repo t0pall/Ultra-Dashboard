@@ -1,16 +1,40 @@
-import { useState } from "react"
-import { useTranslation } from "react-i18next"
+import { Col, Row } from 'antd';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const Home = () => {
-  const {i18n} = useTranslation()
+  const { i18n } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
   const changeLocale = () => {
-    setCurrentLanguage(currentLanguage === 'ru' ? 'en' : 'ru')
-    i18n.changeLanguage(currentLanguage === 'ru' ? 'en' : 'ru')
-  }
+    setCurrentLanguage(currentLanguage === 'ru' ? 'en' : 'ru');
+    i18n.changeLanguage(currentLanguage === 'ru' ? 'en' : 'ru');
+  };
 
   return (
-    <div><button style={{position: 'absolute', top: 5, left: 5, zIndex: 10000}} onClick={changeLocale}>{i18n.language}</button></div>
-  )
-}
+    <div>
+      <Row gutter={[32, 32]} style={{ marginTop: '32px' }}>
+        <Col
+          xs={24}
+          sm={24}
+          xl={8}
+          style={{
+            height: '460px',
+          }}
+        >
+          CalendarUpcomingEvents
+        </Col>
+        <Col
+          xs={24}
+          sm={24}
+          xl={8}
+          style={{
+            height: '460px',
+          }}
+        >
+          DashboardDealsChart
+        </Col>
+      </Row>
+    </div>
+  );
+};

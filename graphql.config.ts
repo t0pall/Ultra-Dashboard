@@ -8,7 +8,7 @@ const config: IGraphQLConfig = {
         afterOneFileWrite: ["eslint --fix", "prettier --write"],
       },
       generates: {
-        "graphql/schema.types.ts": {
+        "src/graphql/schema.types.ts": {
           plugins: ["typescript"],
           config: {
             skipTypename: true, // skipTypename is used to remove __typename from the generated types
@@ -27,10 +27,10 @@ const config: IGraphQLConfig = {
         },
         // generates typescript types from GraphQL operations
         // graphql operations are queries, mutations, and subscriptions we write in our code to communicate with the GraphQL API
-        "graphql/types.ts": {
+        "src/graphql/types.ts": {
           preset: "import-types",
           // documents is used to define the path of the files that contain GraphQL operations
-          documents: ["graphql/**/*.{ts,tsx}"],
+          documents: ["src/graphql/**/*.{ts,tsx}"],
           // plugins is used to define the plugins that will be used to generate typescript types from GraphQL operations
           plugins: ["typescript-operations"],
           config: {

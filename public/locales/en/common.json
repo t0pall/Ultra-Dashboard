@@ -59,8 +59,8 @@
       }
     },
     "error": {
-      "info": "You may have forgotten to add the {{action}} component to {{resource}} resource.",
       "404": "Sorry, the page you visited does not exist.",
+      "info": "You may have forgotten to add the {{action}} component to {{resource}} resource.",
       "resource404": "Are you sure you have created the {{resource}} resource.",
       "backHome": "Back Home"
     }
@@ -86,7 +86,8 @@
     "undo": "Undo",
     "import": "Import",
     "clone": "Clone",
-    "notAccessTitle": "You don't have permission to access"
+    "notAccessTitle": "You don't have permission to access",
+    "accountSettings": "Account settings"
   },
   "warnWhenUnsavedChanges": "Are you sure you want to leave? You have unsaved changes.",
   "notifications": {
