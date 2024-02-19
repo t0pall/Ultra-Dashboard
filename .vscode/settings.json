@@ -2,5 +2,13 @@
   "i18n-ally.localesPaths": [
     "public/locales"
   ],
-  "i18n-ally.keystyle": "nested"
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.extract.ignoredByFiles": {
+    "src\\components\\home\\upcoming-events.tsx": [
+      "8px 16px"
+    ]
+  },
+  "i18n-ally.extract.ignored": [
+    "0 1rem"
+  ]
 }

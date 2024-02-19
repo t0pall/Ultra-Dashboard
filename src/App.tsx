@@ -21,6 +21,7 @@ import { authProvider, dataProvider, liveProvider } from './providers';
 import { Home, ForgotPassword, Login, Register } from './pages';
 import Layout from './components/layout';
 import { resources } from 'config/resources';
+import { LangSwitch } from 'components/lang-switch';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -52,6 +53,7 @@ function App() {
                 liveMode: 'auto',
               }}
             >
+              <LangSwitch />
               <Routes>
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />

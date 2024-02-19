@@ -1,16 +1,7 @@
 import { Col, Row } from 'antd';
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { DealsChart, UpcomingEvents } from 'components';
 
 export const Home = () => {
-  const { i18n } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
-
-  const changeLocale = () => {
-    setCurrentLanguage(currentLanguage === 'ru' ? 'en' : 'ru');
-    i18n.changeLanguage(currentLanguage === 'ru' ? 'en' : 'ru');
-  };
-
   return (
     <div>
       <Row gutter={[32, 32]} style={{ marginTop: '32px' }}>
@@ -22,7 +13,7 @@ export const Home = () => {
             height: '460px',
           }}
         >
-          CalendarUpcomingEvents
+          <UpcomingEvents />
         </Col>
         <Col
           xs={24}
@@ -32,7 +23,7 @@ export const Home = () => {
             height: '460px',
           }}
         >
-          DashboardDealsChart
+          <DealsChart />
         </Col>
       </Row>
     </div>
