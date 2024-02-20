@@ -141,21 +141,20 @@
     }
   },
   "documentTitle": {
-    "default": "refine",
-    "suffix": " | refine",
+    "default": "Dashboard",
     "blog_posts": {
-      "list": "Blog Posts | refine",
-      "show": "#{{id}} Show Blog Post | refine",
-      "edit": "#{{id}} Edit Blog Post | refine",
-      "create": "Create new Blog Post | refine",
-      "clone": "#{{id}} Clone Blog Post | refine"
+      "list": "Blog Posts",
+      "show": "#{{id}} Show Blog Post",
+      "edit": "#{{id}} Edit Blog Post",
+      "create": "Create new Blog Post",
+      "clone": "#{{id}} Clone Blog Post"
     },
     "categories": {
-      "list": "Categories | refine",
-      "show": "#{{id}} Show Category | refine",
-      "edit": "#{{id}} Edit Category | refine",
-      "create": "Create new Category | refine",
-      "clone": "#{{id}} Clone Category | refine"
+      "list": "Categories",
+      "show": "#{{id}} Show Category",
+      "edit": "#{{id}} Edit Category",
+      "create": "Create new Category",
+      "clone": "#{{id}} Clone Category"
     }
   },
   "table": {

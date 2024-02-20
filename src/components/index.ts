@@ -6,3 +6,4 @@ export { KanbanColumnSkeleton } from './skeleton/kanban';
 export { LatestActivitiesSkeleton } from './skeleton/latest-activities';
 export { ProjectCardSkeleton } from './skeleton/project-card';
 export { UpcomingEventsSkeleton } from './skeleton/upcoming-events';
+export {DashboardTotalCountCard} from './home/total-count-card'
