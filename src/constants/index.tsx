@@ -27,6 +27,7 @@ import {
   Contact,
   Industry,
 } from "graphql/schema.types";
+import i18next from "i18next";
 
 export type TotalCountType = "companies" | "contacts" | "deals";
 
@@ -52,7 +53,7 @@ export const totalCountVariants: {
         />
       </IconWrapper>
     ),
-    title: "Number of companies",
+    title: "dashboard.NumberOfCompanies",
     data: [
       {
         index: "1",
@@ -89,7 +90,7 @@ export const totalCountVariants: {
         />
       </IconWrapper>
     ),
-    title: "Number of contacts",
+    title: "dashboard.NumberOfContacts",
     data: [
       {
         index: "1",
@@ -130,7 +131,7 @@ export const totalCountVariants: {
         />
       </IconWrapper>
     ),
-    title: "Total deals in pipeline",
+    title: "dashboard.TotalDealsInPipeline",
     data: [
       {
         index: "1",

@@ -1,15 +1,18 @@
 import { DollarOutlined } from '@ant-design/icons';
 import { Area, AreaConfig } from '@ant-design/plots';
-import { useList } from '@refinedev/core';
+import { useGetLocale, useList, useTranslate } from '@refinedev/core';
 import { GetFieldsFromList } from '@refinedev/nestjs-query';
 import { Card } from 'antd';
 import { Text } from 'components/text';
 import { DASHBOARD_DEALS_CHART_QUERY } from 'graphql/queries';
 import { DashboardDealsChartQuery } from 'graphql/types';
 import { useMemo } from 'react';
-import { mapDealsData } from 'utilities/helpers';
+import { getFormattedDate, mapDealsData } from 'utilities/helpers';
 
 export const DealsChart = () => {
+  const t = useTranslate();
+  const locale = useGetLocale();
+
   const { data, isLoading } = useList<
     GetFieldsFromList<DashboardDealsChartQuery>
   >({
@@ -23,8 +26,6 @@ export const DealsChart = () => {
   const dealData = useMemo(() => {
     return mapDealsData(data?.data);
   }, [data?.data]);
-
-  console.log(data?.data, mapDealsData(data?.data));
 
   const config: AreaConfig = {
     data: dealData,
@@ -42,15 +43,20 @@ export const DealsChart = () => {
       tickCount: 4,
       label: {
         formatter: (v: string) => {
-          return `₽ ${Number(v) / 1000}тыс.`;
+          return `${locale() === 'en' ? '$' : '₽'} ${Number(v) / 1000}${locale() === 'en' ? 'k' : 'тыс.'}`;
         },
+      },
+    },
+    xAxis: {
+      label: {
+        formatter: (v: string) => getFormattedDate(v, locale() || 'ru'),
       },
     },
     tooltip: {
       formatter: (data) => {
         return {
           name: data.state,
-          value: `${Number(data.value).toLocaleString()}₽`,
+          value: `${Number(data.value).toLocaleString()}${locale() === 'en' ? '$' : '₽'}`,
         };
       },
     },
@@ -73,7 +79,7 @@ export const DealsChart = () => {
         >
           <DollarOutlined />
           <Text size="sm" style={{ marginLeft: '0.5rem' }}>
-            Deals
+            {t('dashboard.Deals')}
           </Text>
         </div>
       }

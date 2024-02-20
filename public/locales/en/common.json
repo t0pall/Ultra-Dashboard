@@ -107,7 +107,11 @@
     "clone": "Clone"
   },
   "dashboard": {
-    "title": "Dashboard"
+    "title": "Dashboard",
+    "upcomingEvents": "Upcoming events",
+    "TotalDealsInPipeline": "Total deals in pipeline",
+    "NumberOfContacts": "Number of contacts",
+    "Dashboard": "Dashboard"
   },
   "blog_posts": {
     "blog_posts": "Blog Posts",
@@ -159,5 +163,11 @@
   },
   "table": {
     "actions": "Actions"
+  },
+  "dahboard": {
+    "NoUpcomingEvents": "No upcoming events"
+  },
+  "companies": {
+    "Companies": "Companies"
   }
 }

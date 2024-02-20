@@ -1,4 +1,5 @@
 import { Area, AreaConfig } from '@ant-design/plots';
+import { useTranslate } from '@refinedev/core';
 import { Card, Skeleton } from 'antd';
 import { Text } from 'components/text';
 import { totalCountVariants, type TotalCountType } from 'constants/index';
@@ -14,6 +15,7 @@ export const DashboardTotalCountCard = ({
   isLoading,
   totalCount,
 }: Props) => {
+  const t = useTranslate();
   const { primaryColor, secondaryColor, icon, title } =
     totalCountVariants[resource];
 
@@ -32,26 +34,26 @@ export const DashboardTotalCountCard = ({
       tickCount: 12,
       label: {
         style: {
-          stroke: 'transparent'
-        }
+          stroke: 'transparent',
+        },
       },
       grid: {
         line: {
           style: {
-            stroke: 'transparent'
-          }
-        }
-      }
+            stroke: 'transparent',
+          },
+        },
+      },
     },
     smooth: true,
     line: {
-      color: primaryColor
+      color: primaryColor,
     },
     areaStyle: () => {
       return {
-        fill: `l(270) 0:#fff 0.2:${secondaryColor} 1:${primaryColor}`
-      }
-    }
+        fill: `l(270) 0:#fff 0.2:${secondaryColor} 1:${primaryColor}`,
+      };
+    },
   };
 
   return (
@@ -70,7 +72,7 @@ export const DashboardTotalCountCard = ({
       >
         {icon}
         <Text size="md" className="secondary" style={{ marginLeft: '8px' }}>
-          {title}
+          {t(title)}
         </Text>
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>

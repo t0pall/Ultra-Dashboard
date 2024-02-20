@@ -1,7 +1,11 @@
 import dayjs from 'dayjs';
+import ruLocale from 'dayjs/locale/ru';
+import enLocale from 'dayjs/locale/en';
 import { GetFieldsFromList } from '@refinedev/nestjs-query';
 
 import { DashboardDealsChartQuery } from 'graphql/types';
+
+const getLocale = (lang: string) => (lang === 'ru' ? ruLocale : enLocale);
 
 type DealStage = GetFieldsFromList<DashboardDealsChartQuery>;
 
@@ -14,12 +18,23 @@ interface MappedDealData {
   state: string;
 }
 
-// Get the date in the format "MMM DD, YYYY - HH:mm"
-export const getDate = (startDate: string, endDate: string) => {
-  const start = dayjs(startDate).format('MMM DD, YYYY - HH:mm');
-  const end = dayjs(endDate).format('MMM DD, YYYY - HH:mm');
+export const getDate = (
+  startDate: string,
+  endDate: string,
+  language: string
+) => {
+  const start = dayjs(startDate)
+    .locale(getLocale(language))
+    .format('DD MMMM YYYY HH:mm');
+  const end = dayjs(endDate)
+    .locale(getLocale(language))
+    .format('DD MMMM YYYY HH:mm');
 
-  return `${start} - ${end}`;
+  return `${start} — ${end}`;
+};
+
+export const getFormattedDate = (date: string, language: string) => {
+  return dayjs(date).locale(getLocale(language)).format('DD MMM YYYY');
 };
 
 // Filter out deals that don't have a closeDateMonth or closeDateYear

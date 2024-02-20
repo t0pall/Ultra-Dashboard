@@ -1,7 +1,4 @@
-import {
-  Authenticated,
-  Refine,
-} from '@refinedev/core';
+import { Authenticated, Refine } from '@refinedev/core';
 import { DevtoolsPanel, DevtoolsProvider } from '@refinedev/devtools';
 import { RefineKbar, RefineKbarProvider } from '@refinedev/kbar';
 
@@ -25,7 +22,6 @@ import { LangSwitch } from 'components/lang-switch';
 
 function App() {
   const { t, i18n } = useTranslation();
-
   const i18nProvider = {
     translate: (key: string, params: object) => t(key, params),
     changeLocale: (lang: string) => i18n.changeLanguage(lang),
@@ -42,7 +38,7 @@ function App() {
               liveProvider={liveProvider}
               notificationProvider={useNotificationProvider}
               authProvider={authProvider}
-              resources={resources}
+              resources={resources(t)}
               routerProvider={routerBindings}
               i18nProvider={i18nProvider}
               options={{

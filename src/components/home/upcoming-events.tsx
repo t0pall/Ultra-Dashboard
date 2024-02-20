@@ -1,6 +1,6 @@
 import { CalendarOutlined } from '@ant-design/icons';
 import dayjs from 'dayjs';
-import { useList, useTranslate } from '@refinedev/core';
+import { useGetLocale, useList, useTranslate } from '@refinedev/core';
 import { Badge, Card, List } from 'antd';
 import { Text, UpcomingEventsSkeleton } from 'components';
 import { DASHBORAD_CALENDAR_UPCOMING_EVENTS_QUERY } from 'graphql/queries';
@@ -8,6 +8,7 @@ import { getDate } from 'utilities/helpers';
 
 export const UpcomingEvents = () => {
   const t = useTranslate();
+  const locale = useGetLocale()
 
   const { data, isLoading } = useList({
     resource: 'events',
@@ -41,7 +42,7 @@ export const UpcomingEvents = () => {
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <CalendarOutlined />
           <Text size="sm" style={{ marginLeft: '0.7rem' }}>
-            {t('upcomingEvents')}
+            {t('dashboard.upcomingEvents')}
           </Text>
         </div>
       }
@@ -59,7 +60,7 @@ export const UpcomingEvents = () => {
           itemLayout="horizontal"
           dataSource={data?.data || []}
           renderItem={(item) => {
-            const renderDate = getDate(item.startDate, item.endDate);
+            const renderDate = getDate(item.startDate, item.endDate, locale() || 'ru');
             return (
               <List.Item>
                 <List.Item.Meta
@@ -85,7 +86,7 @@ export const UpcomingEvents = () => {
             height: '220px',
           }}
         >
-          No upcoming events
+          {t('dahboard.NoUpcomingEvents')}
         </span>
       )}
     </Card>

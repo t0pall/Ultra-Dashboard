@@ -107,7 +107,13 @@
     "clone": "Клонировать"
   },
   "dashboard": {
-    "title": "Панель управления"
+    "title": "Панель управления",
+    "upcomingEvents": "Предстоящие события",
+    "Deals": "Сделки",
+    "NumberOfCompanies": "Количество предприятий",
+    "TotalDealsInPipeline": "Всего сделок в воронке",
+    "NumberOfContacts": "Всего контактов",
+    "Dashboard": "Показатели"
   },
   "blog_posts": {
     "blog_posts": "Записи в блоге",
@@ -159,5 +165,14 @@
   },
   "table": {
     "actions": "Действия"
+  },
+  "dahboard": {
+    "NoUpcomingEvents": "Пока ничего не запланировано"
+  },
+  "companies": {
+    "Companies": "Компании"
+  },
+  "tasks": {
+    "Tasks": "Задачи"
   }
 }
