@@ -111,7 +111,13 @@
     "upcomingEvents": "Upcoming events",
     "TotalDealsInPipeline": "Total deals in pipeline",
     "NumberOfContacts": "Number of contacts",
-    "Dashboard": "Dashboard"
+    "Dashboard": "Dashboard",
+    "LatestActivities": "Latest activities",
+    "Created": "created",
+    "Moved": "moved",
+    "In": "in",
+    "To": "to",
+    "Deal": "deal"
   },
   "blog_posts": {
     "blog_posts": "Blog Posts",

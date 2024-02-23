@@ -1,7 +1,6 @@
 import { Button, Popover } from 'antd';
 import CustomAvatar from '../custom-avatar';
 import { useGetIdentity, useTranslate } from '@refinedev/core';
-
 import type { User } from 'graphql/schema.types';
 import { Text } from 'components/text';
 import { SettingOutlined } from '@ant-design/icons';

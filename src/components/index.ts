@@ -7,3 +7,4 @@ export { LatestActivitiesSkeleton } from './skeleton/latest-activities';
 export { ProjectCardSkeleton } from './skeleton/project-card';
 export { UpcomingEventsSkeleton } from './skeleton/upcoming-events';
 export {DashboardTotalCountCard} from './home/total-count-card'
+export {LatestActivities} from './home/latest-activities'

@@ -1,15 +1,11 @@
 import { SaveButton, useForm } from '@refinedev/antd';
 import { HttpError, useTranslate } from '@refinedev/core';
 import { GetFields, GetVariables } from '@refinedev/nestjs-query';
-
 import { CloseOutlined } from '@ant-design/icons';
 import { Button, Card, Drawer, Form, Input, Spin } from 'antd';
-
-import { getNameInitials } from 'utilities';
 import { UPDATE_USER_MUTATION } from 'graphql/mutations';
 import { Text } from '../text';
 import CustomAvatar from '../custom-avatar';
-
 import { UpdateUserMutation, UpdateUserMutationVariables } from 'graphql/types';
 
 type Props = {
@@ -96,9 +92,11 @@ export const AccountSettings = ({ opened, setOpened, userId }: Props) => {
             <CustomAvatar
               shape="square"
               src={avatarUrl}
-              name={getNameInitials(name || '')}
+              size={'large'}
+              name={name}
               style={{
                 width: 96,
+                fontSize: 28,
                 height: 96,
                 marginBottom: '24px',
               }}

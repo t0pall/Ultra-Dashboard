@@ -113,7 +113,13 @@
     "NumberOfCompanies": "Количество предприятий",
     "TotalDealsInPipeline": "Всего сделок в воронке",
     "NumberOfContacts": "Всего контактов",
-    "Dashboard": "Показатели"
+    "Dashboard": "Показатели",
+    "LatestActivities": "Последняя активность",
+    "Created": "создал",
+    "Moved": "переместил",
+    "In": "в",
+    "To": "в",
+    "Deal": "сделку"
   },
   "blog_posts": {
     "blog_posts": "Записи в блоге",
