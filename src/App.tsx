@@ -15,7 +15,7 @@ import { useTranslation } from 'react-i18next';
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 
 import { authProvider, dataProvider, liveProvider } from './providers';
-import { Home, ForgotPassword, Login, Register } from './pages';
+import { Home, ForgotPassword, Login, Register, CompanyList } from './pages';
 import Layout from './components/layout';
 import { resources } from 'config/resources';
 import { LangSwitch } from 'components/lang-switch';
@@ -67,6 +67,7 @@ function App() {
                   }
                 >
                   <Route index element={<Home />} />
+                  <Route path='/companies' element={<CompanyList />} />
                 </Route>
               </Routes>
               <RefineKbar />
