@@ -2,9 +2,11 @@
 
 ## О проекте
 
+###Приборная панель CRM, обновляемая в реальном времени
+
 ⭐ **Демо [здесь](https://ultra-dashboard.netlify.app).**
 
-"Приборная панель CRM в реальном времени" был разработан с использованием [Refine](https://refine.dev/), [Ant Design](https://ant.design/) и [GraphQL](https://graphql.org/).
+Проект был разработан с использованием [Refine](https://refine.dev/), [Ant Design](https://ant.design/) и [GraphQL](https://graphql.org/).
 
 ## Стек технологий
 
