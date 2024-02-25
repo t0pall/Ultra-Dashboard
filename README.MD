@@ -14,6 +14,7 @@
 - Ant Design
 - Codegen
 - Vite
+- i18next
 
 ## Особенности
 
