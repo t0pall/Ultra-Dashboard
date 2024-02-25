@@ -1,27 +1,39 @@
-import { Authenticated, Refine } from '@refinedev/core';
-import { DevtoolsPanel, DevtoolsProvider } from '@refinedev/devtools';
-import { RefineKbar, RefineKbarProvider } from '@refinedev/kbar';
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 
-import { useNotificationProvider } from '@refinedev/antd';
-import '@refinedev/antd/dist/reset.css';
-
-import routerBindings, {
+import { RefineThemes, useNotificationProvider } from "@refinedev/antd";
+import { Authenticated, ErrorComponent, Refine } from "@refinedev/core";
+import { useTranslation } from 'react-i18next';
+import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
+import routerProvider, {
   CatchAllNavigate,
   DocumentTitleHandler,
+  NavigateToResource,
   UnsavedChangesNotifier,
-} from '@refinedev/react-router-v6';
-import { App as AntdApp } from 'antd';
-import { useTranslation } from 'react-i18next';
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
+} from "@refinedev/react-router-v6";
 
-import { authProvider, dataProvider, liveProvider } from './providers';
-import { Home, ForgotPassword, Login, Register, CompanyList } from './pages';
-import Layout from './components/layout';
-import { resources } from 'config/resources';
-import { LangSwitch } from 'components/lang-switch';
+import { App as AntdApp, ConfigProvider } from "antd";
 
-function App() {
-  const { t, i18n } = useTranslation();
+import { Layout } from "@/components";
+import { resources } from "@/config/resources";
+import { authProvider, dataProvider, liveProvider } from "@/providers";
+import {
+  CompanyCreatePage,
+  CompanyEditPage,
+  CompanyListPage,
+  DashboardPage,
+  ForgotPassword,
+  LoginPage,
+  Register,
+  TasksCreatePage,
+  TasksEditPage,
+  TasksListPage,
+} from "@/routes";
+
+import "@refinedev/antd/dist/reset.css";
+import i18n from "./i18n";
+
+const App = () => {
+  const { t } = useTranslation();
   const i18nProvider = {
     translate: (key: string, params: object) => t(key, params),
     changeLocale: (lang: string) => i18n.changeLanguage(lang),
@@ -30,30 +42,26 @@ function App() {
 
   return (
     <BrowserRouter>
-      <RefineKbarProvider>
+      <ConfigProvider theme={RefineThemes.Red}>
         <AntdApp>
           <DevtoolsProvider>
             <Refine
+              routerProvider={routerProvider}
               dataProvider={dataProvider}
               liveProvider={liveProvider}
               notificationProvider={useNotificationProvider}
               authProvider={authProvider}
               resources={resources(t)}
-              routerProvider={routerBindings}
               i18nProvider={i18nProvider}
               options={{
                 syncWithLocation: true,
                 warnWhenUnsavedChanges: true,
+                liveMode: "auto",
                 useNewQueryKeys: true,
-                projectId: 'J4a8E0-smRNs5-wqsdkw',
-                liveMode: 'auto',
+                projectId: "9e6tql-kMtErr-wcgjHa"
               }}
             >
-              <LangSwitch />
               <Routes>
-                <Route path="/register" element={<Register />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route
                   element={
                     <Authenticated
@@ -66,20 +74,53 @@ function App() {
                     </Authenticated>
                   }
                 >
-                  <Route index element={<Home />} />
-                  <Route path='/companies' element={<CompanyList />} />
+                  <Route index element={<DashboardPage />} />
+
+                  <Route
+                    path="/tasks"
+                    element={
+                      <TasksListPage>
+                        <Outlet />
+                      </TasksListPage>
+                    }
+                  >
+                    <Route path="new" element={<TasksCreatePage />} />
+                    <Route path="edit/:id" element={<TasksEditPage />} />
+                  </Route>
+
+                  <Route path="/companies">
+                    <Route index element={<CompanyListPage />} />
+                    <Route path="new" element={<CompanyCreatePage />} />
+                    <Route path="edit/:id" element={<CompanyEditPage />} />
+                  </Route>
+
+                  <Route path="*" element={<ErrorComponent />} />
+                </Route>
+
+                <Route
+                  element={
+                    <Authenticated
+                      key="authenticated-auth"
+                      fallback={<Outlet />}
+                    >
+                      <NavigateToResource resource="dashboard" />
+                    </Authenticated>
+                  }
+                >
+                  <Route path="/login" element={<LoginPage />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/forgot-password" element={<ForgotPassword />} />
                 </Route>
               </Routes>
-              <RefineKbar />
               <UnsavedChangesNotifier />
               <DocumentTitleHandler />
             </Refine>
             <DevtoolsPanel />
           </DevtoolsProvider>
         </AntdApp>
-      </RefineKbarProvider>
+      </ConfigProvider>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

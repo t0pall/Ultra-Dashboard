@@ -1,48 +1,48 @@
 {
   "pages": {
     "login": {
-      "title": "Войти в свой аккаунт",
+      "title": "Войдите в свою учетную запись",
       "signin": "Войти",
       "signup": "Зарегистрироваться",
       "divider": "или",
       "fields": {
-        "email": "Email",
+        "email": "Электронная почта",
         "password": "Пароль"
       },
       "errors": {
-        "validEmail": "Некорректный адрес электронной почты"
+        "validEmail": "Неверный адрес электронной почты"
       },
       "buttons": {
         "submit": "Войти",
         "forgotPassword": "Забыли пароль?",
-        "noAccount": "Нет аккаунта?",
+        "noAccount": "Нет учетной записи?",
         "rememberMe": "Запомнить меня"
       }
     },
     "forgotPassword": {
       "title": "Забыли пароль?",
       "fields": {
-        "email": "Email"
+        "email": "Электронная почта"
       },
       "errors": {
-        "validEmail": "Некорректный адрес электронной почты"
+        "validEmail": "Неверный адрес электронной почты"
       },
       "buttons": {
         "submit": "Отправить инструкции по сбросу"
       }
     },
     "register": {
-      "title": "Зарегистрируйтесь",
+      "title": "Зарегистрируйтесь для вашей учетной записи",
       "fields": {
-        "email": "Email",
+        "email": "Электронная почта",
         "password": "Пароль"
       },
       "errors": {
-        "validEmail": "Некорректный адрес электронной почты"
+        "validEmail": "Неверный адрес электронной почты"
       },
       "buttons": {
         "submit": "Зарегистрироваться",
-        "haveAccount": "Уже есть аккаунт?"
+        "haveAccount": "Уже есть учетная запись?"
       }
     },
     "updatePassword": {
@@ -60,7 +60,7 @@
     },
     "error": {
       "404": "Извините, посещенная вами страница не существует.",
-      "info": "Возможно, вы забыли добавить компонент {{action}} в ресурс {{resource}}.",
+      "info": "Возможно, вы забыли добавить компонент {{action}} к ресурсу {{resource}}.",
       "resource404": "Вы уверены, что создали ресурс {{resource}}.",
       "backHome": "На главную"
     }
@@ -79,7 +79,7 @@
     "edit": "Редактировать",
     "cancel": "Отмена",
     "confirm": "Вы уверены?",
-    "filter": "Фильтр",
+    "filter": "Фильтровать",
     "clear": "Очистить",
     "refresh": "Обновить",
     "show": "Показать",
@@ -87,18 +87,18 @@
     "import": "Импорт",
     "clone": "Клонировать",
     "notAccessTitle": "У вас нет доступа",
-    "accountSettings": "Настройки аккаунта"
+    "accountSettings": "Настройки учетной записи"
   },
   "warnWhenUnsavedChanges": "Вы уверены, что хотите уйти? У вас есть несохраненные изменения.",
   "notifications": {
     "success": "Успешно",
     "error": "Ошибка (код состояния: {{statusCode}})",
-    "undoable": "У вас есть {{seconds}} секунд, чтобы отменить",
-    "createSuccess": "Успешно создано: {{resource}}",
-    "createError": "Ошибка при создании {{resource}} (код состояния: {{statusCode}})",
-    "deleteSuccess": "Успешно удалено: {{resource}}",
+    "undoable": "У вас есть {{seconds}} секунд для отмены",
+    "createSuccess": "Успешно создано {{resource}}",
+    "createError": "При создании {{resource}} произошла ошибка (код состояния: {{statusCode}})",
+    "deleteSuccess": "Успешно удалено {{resource}}",
     "deleteError": "Ошибка при удалении {{resource}} (код состояния: {{statusCode}})",
-    "editSuccess": "Успешно отредактировано: {{resource}}",
+    "editSuccess": "Успешно отредактировано {{resource}}",
     "editError": "Ошибка при редактировании {{resource}} (код состояния: {{statusCode}})",
     "importProgress": "Импорт: {{processed}}/{{total}}"
   },
@@ -109,41 +109,42 @@
   "dashboard": {
     "title": "Панель управления",
     "upcomingEvents": "Предстоящие события",
-    "Deals": "Сделки",
-    "NumberOfCompanies": "Количество предприятий",
-    "TotalDealsInPipeline": "Всего сделок в воронке",
-    "NumberOfContacts": "Всего контактов",
-    "Dashboard": "Показатели",
-    "LatestActivities": "Последняя активность",
-    "Created": "создал",
-    "Moved": "переместил",
-    "In": "в",
-    "To": "в",
-    "Deal": "сделку"
+    "noUpcomingEvents": "Нет предстоящих событий",
+    "totalDealsInPipeline": "Всего сделок в воронке",
+    "numberOfContacts": "Количество контактов",
+    "dashboard": "Панель управления",
+    "latestActivities": "Последние действия",
+    "created": "выполнил(а)",
+    "moved": "переместил(а)",
+    "in": "в",
+    "to": "в",
+    "deal": "сделку",
+    "deals": "Сделки",
+    "numberOfCompanies": "Количество компаний"
   },
   "blog_posts": {
-    "blog_posts": "Записи в блоге",
+    "blog_posts": "Записи блога",
     "fields": {
-      "id": "Идентификатор",
+      "id": "Id",
       "title": "Заголовок",
       "content": "Содержание",
       "status": "Статус",
-      "createdAt": "Дата создания",
+      "createdAt": "Создано",
       "category": "Категория"
     },
     "titles": {
       "create": "Создать запись в блоге",
       "edit": "Редактировать запись в блоге",
-      "list": "Записи в блоге",
+      "list": "Записи блога",
       "show": "Показать запись в блоге"
     }
   },
   "categories": {
     "categories": "Категории",
     "fields": {
-      "id": "Идентификатор",
+      "id": "Id",
       "title": "Заголовок",
-      "createdAt": "Дата создания"
+      "createdAt": "Создано"
     },
     "titles": {
       "create": "Создать категорию",
@@ -153,9 +154,9 @@
     }
   },
   "documentTitle": {
-    "default": "Dashboard",
+    "default": "Панель управления",
     "blog_posts": {
-      "list": "Записи в блоге",
+      "list": "Записи блога",
       "show": "#{{id}} Показать запись в блоге",
       "edit": "#{{id}} Редактировать запись в блоге",
       "create": "Создать новую запись в блоге",
@@ -172,13 +173,104 @@
   "table": {
     "actions": "Действия"
   },
-  "dahboard": {
-    "NoUpcomingEvents": "Пока ничего не запланировано"
-  },
   "companies": {
-    "Companies": "Компании"
+    "companies": "компаний",
+    "Companies": "Компании",
+    "companyTitle": "Название компании",
+    "openDealsAmount": "Количество открытых сделок",
+    "actions": "Действия",
+    "Enterprise": "Предприятие",
+    "Large": "Крупная",
+    "Medium": "Средняя",
+    "Small": "Малая",
+    "Aerospace": "Авиакосмическая",
+    "Agriculture": "Сельское хозяйство",
+    "Automotive": "Автомобильная",
+    "Chemicals": "Химическая",
+    "Construction": "Строительство",
+    "Defense": "Оборонная",
+    "Education": "Образование",
+    "Energy": "Энергетика",
+    "FinancialServices": "Финансовые услуги",
+    "FoodAndBeverage": "Продукты питания и напитки",
+    "Government": "Государственные органы",
+    "Healthcare": "Здравоохранение",
+    "Hospitality": "Гостиничный бизнес",
+    "IndustrialManufacturing": "Промышленное производство",
+    "Insurance": "Страхование",
+    "LifeSciences": "Науки о жизни",
+    "Logistics": "Логистика",
+    "Media": "Медиа",
+    "Mining": "Горнодобывающая",
+    "Nonprofit": "Некоммерческая",
+    "Other": "Другие",
+    "Pharmaceuticals": "Фармацевтика",
+    "ProfessionalServices": "Профессиональные услуги",
+    "RealEstate": "Недвижимость",
+    "Retail": "Розничная торговля",
+    "Technology": "Технологии",
+    "Telecommunications": "Телекоммуникации",
+    "Transportation": "Транспорт",
+    "Utilities": "Коммунальные услуги",
+    "CompanySize": "Размер компании",
+    "SalesOwner": "Владелец продаж",
+    "TotalRevenue": "Общий доход",
+    "Industry": "Отрасль",
+    "BusinessType": "Тип бизнеса",
+    "Country": "Страна",
+    "Website": "Веб-сайт",
+    "Lost": "Убыток",
+    "Contacts": "Контакты",
+    "TotalContacts": "Всего контактов: ",
+    "Name": "Имя",
+    "SearchName": "Поиск по имени",
+    "Title": "Должность",
+    "SearchTitle": "Поиск по должности",
+    "Stage": "Этап",
+    "SelectStage": "Выберите этап",
+    "New": "Новый",
+    "Qualified": "Квалифицированный",
+    "Unqualified": "Неквалифицированный",
+    "Won": "Выигранный",
+    "Negotiation": "Переговоры",
+    "Interested": "Заинтересованный",
+    "Contacted": "Связались",
+    "Churned": "Потерян",
+    "AddNewCompany": "Добавить новую компанию",
+    "CompanyName": "Название компании",
+    "PleaseEnterCompanyName": "Пожалуйста, введите название компании",
+    "PleaseSalesOwnerUser": "Пожалуйста, выберите владельца продаж",
+    "SearchCompany": "Поиск компании"
   },
   "tasks": {
-    "Tasks": "Задачи"
+    "Tasks": "Задачи",
+    "TODO": "ПРИСВОЕНО",
+    "IN PROGRESS": "В ПРОЦЕССЕ",
+    "IN REVIEW": "НА РАССМОТРЕНИИ",
+    "DONE": "ВЫПОЛНЕНО",
+    "UNASSIGNED": "НЕ ПРИСВОЕНО",
+    "MarkAsComplete": "Отметить как выполненное",
+    "Overdue": "Просрочено",
+    "DueSoon": "Скоро крайний срок",
+    "Processing": "В работе",
+    "AddDueDate": "Добавить крайний срок",
+    "DueDate": "Крайний срок",
+    "DeleteCard": "Удалить карточку",
+    "Description": "Описание",
+    "AddTaskDescription": "Добавить описание задачи",
+    "AssignToUsers": "Назначить пользователям",
+    "ViewCard": "Просмотреть карточку",
+    "AddNewCard": "Добавить новую карточку",
+    "Title": "Заголовок"
+  },
+  "account": {
+    "Name": "Имя",
+    "name": "имя",
+    "Email": "Электронная почта",
+    "email": "электронная почта",
+    "JobTitle": "Должность",
+    "jobTitle": "должность",
+    "Phone": "Телефон",
+    "phone": "телефон"
   }
 }
