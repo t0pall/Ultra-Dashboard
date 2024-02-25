@@ -6,7 +6,7 @@ export const LoginPage = () => {
   return (
     <AuthPage
       type="login"
-      title={<ThemedTitleV2 collapsed={false} text="Refine Project" />}
+      title={<ThemedTitleV2 collapsed={false} text="Ultra dashboard" />}
       formProps={{
         initialValues: authCredentials,
       }}
