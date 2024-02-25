@@ -1,50 +1,32 @@
-# ultra-dashboard
-
 <div align="center" style="margin: 30px;">
-    <a href="https://refine.dev">
-    <img alt="refine logo" src="https://refine.ams3.cdn.digitaloceanspaces.com/readme/refine-readme-banner.png">
-    </a>
-</div>
-<br/>
 
-This [Refine](https://github.com/refinedev/refine) project was generated with [create refine-app](https://github.com/refinedev/refine/tree/master/packages/create-refine-app).
+## О проекте
 
-## Getting Started
+⭐ **Демо [здесь](https://example.minimal-crm.refine.dev).**
 
-A React Framework for building internal tools, admin panels, dashboards & B2B apps with unmatched flexibility ✨
+"Приборная панель CRM в реальном времени" был разработан с использованием [Refine](https://refine.dev/), [Ant Design](https://ant.design/) и [GraphQL](https://graphql.org/).
 
-Refine's hooks and components simplifies the development process and eliminates the repetitive tasks by providing industry-standard solutions for crucial aspects of a project, including authentication, access control, routing, networking, state management, and i18n.
+## Стек технологий
 
-## Available Scripts
+- Refine
+- TypeScript
+- GraphQL
+- Ant Design
+- Codegen
+- Vite
 
-### Running the development server.
+## Особенности
 
-```bash
-    npm run dev
-```
+**Аутентификация**
 
-### Building for production.
+**Авторизация**
 
-```bash
-    npm run build
-```
+**Главная страница**: Динамическая главная страница демонстрирует интерактивные диаграммы ключевых показателей; обновления в реальном времени о деятельности, предстоящих событиях и диаграмме сделок для бизнес-аналитики.
 
-### Running the production server.
+**Страница компаний**: Полный CRUD для управления компаниями и процессами продаж; подробные профили с функциями добавления/редактирования, связанными контактами/лидами, пагинацией и поиском по полям.
 
-```bash
-    npm run start
-```
+**Доска Kanban**: Совместная доска с обновлениями задач в реальном времени; настраиваемые параметры включают сроки, описания в формате markdown и несколько назначенных лиц, динамически перемещающих задачи по панелям.
 
-## Learn More
+**Настройки учетной записи**: Персонализированные настройки учетной записи пользователя для управления профилем.
 
-To learn more about **Refine**, please check out the [Documentation](https://refine.dev/docs)
-
-- **NestJS Query Data Provider** [Docs](https://refine.dev/docs/core/providers/data-provider/#overview)
-- **Ant Design** [Docs](https://refine.dev/docs/ui-frameworks/antd/tutorial/)
-- **React Router** [Docs](https://refine.dev/docs/core/providers/router-provider/)
-- **Custom Auth Provider** [Docs](https://refine.dev/docs/core/providers/auth-provider/)
-- **i18n** [Docs](https://refine.dev/docs/core/providers/i18n-provider/)
-
-## License
-
-MIT
+**Адаптивность**: Полная адаптивность на всех устройствах для последовательного пользовательского опыта. Гибкий дизайн плавно адаптируется к различным размерам экранов.
