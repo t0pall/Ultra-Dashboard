@@ -2,7 +2,7 @@
 
 ## О проекте
 
-⭐ **Демо [здесь](https://ultra-dashboard-delta.vercel.app).**
+⭐ **Демо [здесь](https://ultra-dashboard.netlify.app).**
 
 "Приборная панель CRM в реальном времени" был разработан с использованием [Refine](https://refine.dev/), [Ant Design](https://ant.design/) и [GraphQL](https://graphql.org/).
 
